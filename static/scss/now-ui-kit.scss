@@ -1,0 +1,60 @@
+/*!
+
+ =========================================================
+ * Convenient means - v1.3.0
+ =========================================================
+
+ * Product Page: https://www.facebook.com/pastetuaam/product/css1
+ * Copyright 2019 Pastetu (http://www.creative-tim.com)
+
+ * Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import 'css1/variables';
+@import 'css1/mixins';
+
+// Plugins CSS
+@import "css1/plugins/plugin-bootstrap-switch";
+@import "css1/plugins/plugin-nouislider";
+@import "css1/plugins/plugin-datepicker";
+
+// Core CSS
+@import "css1/buttons";
+@import "css1/inputs";
+@import "css1/checkboxes-radio";
+@import "css1/progress";
+@import "css1/badges";
+@import "css1/pagination";
+@import "css1/typography";
+@import "css1/misc";
+@import "css1/pills";
+
+// components
+@import "css1/nucleo-outline";
+
+@import "css1/tabs";
+@import "css1/navbar";
+@import "css1/dropdown";
+@import "css1/alerts";
+@import "css1/images";
+@import "css1/popups";
+@import "css1/modals";
+@import "css1/carousel";
+@import "css1/footers";
+
+// Cards
+@import "css1/cards";
+@import "css1/cards/card-plain";
+@import "css1/cards/card-signup";
+
+// example pages and sections
+@import "css1/example-pages";
+@import "css1/sections";
+
+
+@import "css1/responsive";
