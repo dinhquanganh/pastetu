@@ -1,18 +1,12 @@
 /*!
 
  =========================================================
- * Convenient means - v1.3.0
+ * Convenient means  
  =========================================================
 
- * Product Page: https://www.facebook.com/pastetuaam/product/css1
- * Copyright 2019 Pastetu (http://www.creative-tim.com)
-
- * Designed by www.invisionapp.com Coded by www.creative-tim.com
-
+ * Product Page: 
+ * Copyright 2019 Pastetu 
  =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
  */
 
 
@@ -26,7 +20,7 @@ var navbar_initialized,
   backgroundOrange = false,
   toggle_initialized = false;
 
-var nowuiKit,
+var pastetuApp,
   $navbar,
   scroll_distance,
   oVal;
@@ -44,7 +38,7 @@ $(document).ready(function() {
   });
 
   // Activate the image for the navbar-collapse
-  nowuiKit.initNavbarImage();
+  pastetuApp.initNavbarImage();
 
   $navbar = $('.navbar[color-on-scroll]');
   scroll_distance = $navbar.attr('color-on-scroll') || 500;
@@ -52,8 +46,8 @@ $(document).ready(function() {
   // Check if we have the class "navbar-color-on-scroll" then add the function to remove the class "navbar-transparent" so it will transform to a plain color.
 
   if ($('.navbar[color-on-scroll]').length != 0) {
-    nowuiKit.checkScrollForTransparentNavbar();
-    $(window).on('scroll', nowuiKit.checkScrollForTransparentNavbar)
+    pastetuApp.checkScrollForTransparentNavbar();
+    $(window).on('scroll', pastetuApp.checkScrollForTransparentNavbar)
   }
 
   $('.form-control').on("focus", function() {
@@ -77,7 +71,7 @@ $(document).ready(function() {
   if ($(window).width() >= 992) {
     big_image = $('.page-header-image[data-parallax="true"]');
 
-    $(window).on('scroll', nowuiKitDemo.checkScrollForParallax);
+    $(window).on('scroll', pastetuDemo.checkScrollForParallax);
   }
 
   // Activate Carousel
@@ -107,7 +101,7 @@ $(document).ready(function() {
 });
 
 // Javascript just for Demo purpose, remove it from your project
-nowuiKitDemo = {
+pastetuDemo = {
   checkScrollForParallax: debounce(function() {
     var current_scroll = $(this).scrollTop();
 
@@ -143,15 +137,15 @@ function debounce(func, wait, immediate) {
 };
 
 $(window).on('resize', function() {
-  nowuiKit.initNavbarImage();
+  pastetuApp.initNavbarImage();
 });
 
 $(document).on('click', '.navbar-toggler', function() {
   $toggle = $(this);
 
-  if (nowuiKit.misc.navbar_menu_visible == 1) {
+  if (pastetuApp.misc.navbar_menu_visible == 1) {
     $('html').removeClass('nav-open');
-    nowuiKit.misc.navbar_menu_visible = 0;
+    pastetuApp.misc.navbar_menu_visible = 0;
     $('#bodyClick').remove();
     setTimeout(function() {
       $toggle.removeClass('toggled');
@@ -163,7 +157,7 @@ $(document).on('click', '.navbar-toggler', function() {
     div = '<div id="bodyClick"></div>';
     $(div).appendTo('body').click(function() {
       $('html').removeClass('nav-open');
-      nowuiKit.misc.navbar_menu_visible = 0;
+      pastetuApp.misc.navbar_menu_visible = 0;
       setTimeout(function() {
         $toggle.removeClass('toggled');
         $('#bodyClick').remove();
@@ -171,11 +165,11 @@ $(document).on('click', '.navbar-toggler', function() {
     });
 
     $('html').addClass('nav-open');
-    nowuiKit.misc.navbar_menu_visible = 1;
+    pastetuApp.misc.navbar_menu_visible = 1;
   }
 });
 
-nowuiKit = {
+pastetuApp = {
   misc: {
     navbar_menu_visible: 0
   },
@@ -240,7 +234,7 @@ nowuiKit = {
 }
 
 // Javascript just for Demo purpose, remove it from your project
-nowuiKitDemo = {
+pastetuDemo = {
   checkScrollForParallax: debounce(function() {
     var current_scroll = $(this).scrollTop();
 
